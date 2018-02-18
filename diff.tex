@@ -1,7 +1,7 @@
 \documentclass{sig-alternate}
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL old.tex   Mon Feb 19 02:31:48 2018
-%DIF ADD new.tex   Mon Feb 19 02:32:13 2018
+%DIF DEL old.tex   Mon Feb 19 04:42:12 2018
+%DIF ADD new.tex   Mon Feb 19 04:39:31 2018
 \usepackage{comment}
 \usepackage{tabularx}
 \usepackage{tabu}
@@ -105,7 +105,7 @@ MoViMash framework.
 %\keywords{Mobile Video, Virtual Director, Video Mashup.}
 
 \section{Introduction}\label{intro}
-\DIFaddbegin \DIFadd{My name is Parul.
+\DIFaddbegin \DIFadd{My name is User1. This change has been made by me.
 }\DIFaddend Worldwide shipment of camera phones were estimated to reach
 1.14 billion in the year 2011 alone \cite{1}. Furthermore, a survey of over 2,500 respondents by Photobucket reveals that 45\% of the respondents use mobile devices to shoot video at least once weekly during the summer of 2011, validating the significant increase in
 the amount of mobile video uploaded to Photobucket's video sharing
@@ -375,7 +375,8 @@ detection in a given image I:
     The output of the operation gives the density of edges around each pixel.
     \item Labeling the Patches: The image is now divided into patches of block size $b \times b$. Each patch is labeled as 1 if the sum of edge densities is less that a threshold, else it is labeled as 0.
     \begin{equation}
-        I^p(x',y')=\Bigg\{\begin{tabular}{cl}1 & if the sum of edge densities in the patch (x',y') is greater than threshold \\ [1ex] 0 & otherwise. \end{tabular}
+        I^{p}(x',y')=\begin{cases}
+      	1 & \text{if the sum of edge 		densities in the}\\ & \text{patch (x', y') is greater than threshold}\\0 & 		\text{otherwise}\end{cases}
     \end{equation}
     The 1’s in the patch image shows potentially occluded regions.
     \item Connected Components: There can be homogeneous regions in the non-occluded area as well. These regions, however, are generally small. Therefore, connected components operation is performed to find the size of largest group of connected patches with label 1, which corresponds to occluded region.
