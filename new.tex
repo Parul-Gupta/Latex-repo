@@ -82,6 +82,7 @@ MoViMash framework.
 %\keywords{Mobile Video, Virtual Director, Video Mashup.}
 
 \section{Introduction}\label{intro}
+My name is Parul.
 Worldwide shipment of camera phones were estimated to reach
 1.14 billion in the year 2011 alone \cite{1}. Furthermore, a survey of over 2,500 respondents by Photobucket reveals that 45\% of the respondents use mobile devices to shoot video at least once weekly during the summer of 2011, validating the significant increase in
 the amount of mobile video uploaded to Photobucket's video sharing
@@ -176,6 +177,7 @@ methods select shots based on only currently available videos.
 We provide a review of earlier work in Section \ref{previous}. In Section \ref{framework} we describe proposed mashup framework. We evaluate our system in Section \ref{eval}. The conclusions are provided in Section \ref{future}.
 
 \section{Previous Work}\label{previous}
+I am adding irrelevant sentences to this document. 
 There has been only few works on online camera selection. In
 most of these works, videos are mainly selected to show the speakers.
 In the work by Machnicki and Rowe \cite{9}, an online lecture
@@ -296,6 +298,7 @@ through learning for online video selection for live performances.
 \end{figure}
 
 \section{Movimash Framework}\label{framework}
+This is my third sentence.
 In this section, we first enumerate the design principles that we have followed in the development of MoViMash and then describe the framework. After an overview of MoViMash, we focus on individual components.
 \subsection{Design Principles}
 The end goal of the MoViMash is to produce a mashup that users
@@ -422,12 +425,12 @@ As mentioned earlier in Section \ref{intro}, it is difficult to precisely enumer
 
 \begin{equation}
     \bordermatrix{~ & 1 & 2 & 3 & 4 & 5 & 6 & 7 \cr 
-        CN & 1/31 & 2/31 & 4/31 & 7/31 & 7/31 & 6/31 & 4/31 \cr
-        CF & 3/12 & 4/12 & 2/12 & 1/12 & 1/12 & 1/12 & 0 \cr
-        RN & 2/15 & 3/15 & 4/15 & 3/15 & 2/15 & 1/15 & 0 \cr
-        RF & 3/10 & 4/10 & 2/10 & 1/10 & 0 & 0 & 0 \cr
-        LN & 2/15 & 3/15 & 4/15 & 3/15 & 2/15 & 1/15 & 0 \cr
-        LF & 3/10 & 4/10 & 2/10 & 1/10 & 0 & 0 & 0 \cr 
+        \mathcal{CN} & 1/31 & 2/31 & 4/31 & 7/31 & 7/31 & 6/31 & 4/31 \cr
+        \mathcal{CF} & 3/12 & 4/12 & 2/12 & 1/12 & 1/12 & 1/12 & 0 \cr
+        \mathcal{RN} & 2/15 & 3/15 & 4/15 & 3/15 & 2/15 & 1/15 & 0 \cr
+        \mathcal{RF} & 3/10 & 4/10 & 2/10 & 1/10 & 0 & 0 & 0 \cr
+        \mathcal{LN} & 2/15 & 3/15 & 4/15 & 3/15 & 2/15 & 1/15 & 0 \cr
+        \mathcal{LF} & 3/10 & 4/10 & 2/10 & 1/10 & 0 & 0 & 0 \cr 
     }
 \end{equation}
 We use affine transformation to classify the video, giving an accuracy of $\approx 77\%$ on our dataset. However, since learning is one time job, we performed manual classification of shots during the learning phase to get accurate statistics. Equation 7 shows the learned transition matrix while Equation 8 emission matrix. We have carefully selected five videos (live group dances with length of videos ranging from 210 to 300 seconds), which are professionally edited and aired on television. We downloaded these videos from YouTube.
@@ -586,6 +589,7 @@ a friend?)\\
 \end{table}
 
 \section{Evaluation}\label{eval}
+I am adding one sentence per section.
 The main goal of the experiments is to show that the proposed
 framework produces a mashup with better view quality and diversity
 than earlier works. In addition, we also compare our result with
@@ -664,6 +668,7 @@ closer to the human editors. It, however, adds to the processing
 cost. The enhanced diversity model requires more memory for storing the history and more number of comparisons. Similarly, occlusion and tilt also require data processing that would have quadratic complexity in terms of the number of pixels in the image. Therefore, individual components of the framework could be enabled or disabled depending on the quality of the candidate videos. For example, if the videos are taken from the stand-mounted cameras, shakiness calculation can be omitted. Furthermore, to make the system scalable, we can process downscaled images as the video resolution is not critical for the current system components.
 
 \section{ Conclusions \& Future Work}\label{future}
+Finally, I have added all the sentences.
 In this paper, we have proposed and validated an online video
 mashup creation framework, MoViMash, for videos recorded by mobile devices. Based on the experiments and user study, we make following conclusions:
 \begin{itemize}
