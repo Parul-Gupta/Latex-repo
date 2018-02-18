@@ -349,7 +349,8 @@ detection in a given image I:
     The output of the operation gives the density of edges around each pixel.
     \item Labeling the Patches: The image is now divided into patches of block size $b \times b$. Each patch is labeled as 1 if the sum of edge densities is less that a threshold, else it is labeled as 0.
     \begin{equation}
-        I^p(x',y')=\Bigg\{\begin{tabular}{cl}1 & if the sum of edge densities in the patch (x',y') is greater than threshold \\ [1ex] 0 & otherwise. \end{tabular}
+        I^{p}(x',y')=\begin{cases}
+      1 & \text{if the sum of edge densities in the}\\ & \text{patch (x', y') is greater than threshold}\\0 & \text{otherwise}\end{cases}
     \end{equation}
     The 1’s in the patch image shows potentially occluded regions.
     \item Connected Components: There can be homogeneous regions in the non-occluded area as well. These regions, however, are generally small. Therefore, connected components operation is performed to find the size of largest group of connected patches with label 1, which corresponds to occluded region.

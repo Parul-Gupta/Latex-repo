@@ -1,9 +1,32 @@
 \documentclass{sig-alternate}
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL old.tex   Mon Feb 19 02:31:48 2018
+%DIF ADD new.tex   Mon Feb 19 02:32:13 2018
 \usepackage{comment}
 \usepackage{tabularx}
 \usepackage{tabu}
 \pagenumbering{arabic}
 \setcounter{page}{139}
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
 \begin{document}
 %
 % --- Author Metadata here ---
@@ -18,13 +41,13 @@
 \author{
 % 1st. author
 \alignauthor
-Parul Gupta\\
+\DIFdelbegin \DIFdel{Mukesh Saini}\DIFdelend \DIFaddbegin \DIFadd{Parul Gupta}\DIFaddend \\
        \affaddr{Dept. of Computer Science}\\
        \affaddr{\footnotesize{National University of Singapore}}\\
        \email{mksaini@comp.nus.edu.sg}
 % 2nd. author
 \alignauthor
-Nitin Gandhi\\
+\DIFdelbegin \DIFdel{Raghudeep Gadde}\DIFdelend \DIFaddbegin \DIFadd{Nitin Gandhi}\DIFaddend \\
        \affaddr{Dept. of ECE}\\
        \affaddr{\footnotesize{National University of Singapore}}\\
        \email{elerdg@nus.edu.sg}
@@ -32,13 +55,13 @@ Nitin Gandhi\\
 \and  % use '\and' if you need 'another row' of author names
 % 4th. author
 \alignauthor
-Paras Kumar\\
+\DIFdelbegin \DIFdel{Shuicheng Yan}\DIFdelend \DIFaddbegin \DIFadd{Paras Kumar}\DIFaddend \\
        \affaddr{Dept. of ECE}\\
        \affaddr{\footnotesize{National University of Singapore}}\\
        \email{eleyans@nus.edu.sg}
 % 5th. author
 \alignauthor
-Ankan Bal\\
+\DIFdelbegin \DIFdel{Wei Tsang Ooi}\DIFdelend \DIFaddbegin \DIFadd{Ankan Bal}\DIFaddend \\
        \affaddr{Dept. of Computer Science}\\
        \affaddr{\footnotesize{National University of Singapore}}\\
        \email{ooiwt@comp.nus.edu.sg}
@@ -82,8 +105,8 @@ MoViMash framework.
 %\keywords{Mobile Video, Virtual Director, Video Mashup.}
 
 \section{Introduction}\label{intro}
-My name is User1. This change has been made by me.
-Worldwide shipment of camera phones were estimated to reach
+\DIFaddbegin \DIFadd{My name is Parul.
+}\DIFaddend Worldwide shipment of camera phones were estimated to reach
 1.14 billion in the year 2011 alone \cite{1}. Furthermore, a survey of over 2,500 respondents by Photobucket reveals that 45\% of the respondents use mobile devices to shoot video at least once weekly during the summer of 2011, validating the significant increase in
 the amount of mobile video uploaded to Photobucket's video sharing
 website (14 $\times$ in Summer 2011 compared to December 2010)\cite{2}.
@@ -165,20 +188,20 @@ video selection in a lecture broadcast and video streaming \cite{21}\cite{6} and
 
 \textbf{Contributions.}We now summarize our contributions in this paper
 as follows:
-\begin{itemize}
+ \begin{itemize} 
     \item We propose a state-based approach for shot selection that incorporates the selection history in the decision process. Earlier
 methods select shots based on only currently available videos.
     \item We include view quality in the framework to filter out the bad views that are occluded, tilted, or shaky. Earlier methods only considered video quality 
     \item We build a comprehensive model to calculate diversity that considers both previously selected videos and shot lengths.
     \item We propose a learning-based approach where the shot transition probabilities and shot lengths are learned from professionally edited videos.
-\end{itemize}
+ \end{itemize} 
 
 \textbf{Organization.}The rest of the paper is organized as follows.
 We provide a review of earlier work in Section \ref{previous}. In Section \ref{framework} we describe proposed mashup framework. We evaluate our system in Section \ref{eval}. The conclusions are provided in Section \ref{future}.
 
 \section{Previous Work}\label{previous}
-I am adding irrelevant sentences to this document. 
-There has been only few works on online camera selection. In
+\DIFaddbegin \DIFadd{I am adding irrelevant sentences to this document. 
+}\DIFaddend There has been only few works on online camera selection. In
 most of these works, videos are mainly selected to show the speakers.
 In the work by Machnicki and Rowe \cite{9}, an online lecture
 webcast system is presented in which the cameras that are focusing
@@ -298,24 +321,24 @@ through learning for online video selection for live performances.
 \end{figure}
 
 \section{Movimash Framework}\label{framework}
-This is my third sentence.
-In this section, we first enumerate the design principles that we have followed in the development of MoViMash and then describe the framework. After an overview of MoViMash, we focus on individual components.
+\DIFaddbegin \DIFadd{This is my third sentence.
+}\DIFaddend In this section, we first enumerate the design principles that we have followed in the development of MoViMash and then describe the framework. After an overview of MoViMash, we focus on individual components.
 \subsection{Design Principles}
 The end goal of the MoViMash is to produce a mashup that users
 like. To achieve this goal, we have followed a set of design principles as follows:
-\begin{itemize}
+ \begin{itemize} 
     \item \textbf{Video Quality:} In our discussion, video quality includes sharpness, contrast, illumination, and blockiness (due to video compression). A good image quality gives pleasing experience to the viewers \cite{10}. Therefore, in our framework we give priority to good quality videos.
     \item \textbf{View Quality:} A video that is captured by a tilted camera (rotated around horizontal axis) may have very good video quality, yet, users generally do not like tilted views. Similarly, a view in which a person or object is occluding stage area (blocking performance view) may be annoying to the user. Therefore view quality is also important. We measure view quality in terms of occlusion, tilt, and shakiness.
     \item \textbf{Diversity:} While static cameras always record videos from same perspective, mobile users generally shoot videos from a number of views and diverse perspectives. We take this opportunity to include more diversified views in the mashup. Both temporal and spatial aspects of diversity are considered in the proposed framework.
     \item \textbf{Learning:} When professionals edit the videos, they make many decisions based on their experience. Such decisions include shooting angle, distance from the stage, and shot length. It is, however, difficult to precisely state this experience in terms of hard-coded rules. Therefore, in this work, we learn the shot transitions and lengths from professionally edited videos.
-\end{itemize}
+ \end{itemize} 
 The above mentioned design principles are met in our framework through various quality metrics and video selection/filtering phases, as described in the following section.
 
 \subsection{Framework}
 At every time instant, we have a number of videos to choose from. Once we have chosen the video, we also need to decide when to switch to another video. Hence, there are two main questions involved here that need to be answered for combining videos: (1) which video to select? (2) when to switch to another video? We use a three-phase method to select the video while the length is determined based on learned editing rules and overall quality score of the selected video.
 
 Figure \ref{fig:fig2} shows the block diagram of overall framework. The proposed framework consists of one offline learning phase and three online selection phases namely filtering, classification, and selection. At any given time, the following steps are taken to select the most suitable video at current instant:
-\begin{enumerate}
+ \begin{enumerate} 
     \item \textbf{Filtering:} In the filtering step, we determine videos that are unusable by comparing occlusion, shakiness, and tilt scores against empirically determined thresholds. The remaining
     videos are passed to the classification stage.
     \item \textbf{Classification:} The selected cameras are classified as one of right, center, and left according to the capturing angle. Further, according to the viewing distance from the stage, they are classified as near or far.
@@ -323,7 +346,7 @@ Figure \ref{fig:fig2} shows the block diagram of overall framework. The proposed
     and videos from that class are selected for further consideration.
     \item \textbf{Video Selection:} The classified cameras are further ranked with respect to a combined score of video quality, diversity, and shakiness. The video with highest score is selected.
     \item \textbf{Shot Length:} The length of the video is selected based on learned distributions and video quality. A higher quality video is generally selected for longer time.
-\end{enumerate}
+ \end{enumerate} 
 While filtering and selection phase ensure view and video quality, the classification and diversity ensure that we select videos recorded with different angles and viewing distances to provide a complete and interesting coverage of the performance. We now
 describe each component of the framework in detail.
 
@@ -340,7 +363,7 @@ occurs when an object is hidden behind another. In live performances, this could
 We have developed an edge density based method to detect videos with occluded views. The method is based on the assumption that the objects that occlude the performance area will result in lower
 edge density than the performance area. Therefore, the non-occluded area of the image, which is far from the camera, will result in more dense edge points than the occluded area. To differentiate between homogeneous regions of the stage area, which could also have less edge density, and occluded area; we perform connected components on the edge image. Following are the steps of the occlusion
 detection in a given image I:
-\begin{itemize}
+ \begin{itemize} 
     \item Edge Detection: In the first step, we calculate the presence of an edge at each pixel location. Let $I^{e}$ be the resulting binary edge image:
     \begin{equation}
         I^{e}(x,y)=\bigg\{\begin{tabular}{cl}1 & if edge is detected at pixel I(x, y)\\0 & otherwise\end{tabular}
@@ -352,8 +375,7 @@ detection in a given image I:
     The output of the operation gives the density of edges around each pixel.
     \item Labeling the Patches: The image is now divided into patches of block size $b \times b$. Each patch is labeled as 1 if the sum of edge densities is less that a threshold, else it is labeled as 0.
     \begin{equation}
-        I^{p}(x',y')=\begin{cases}
-      	1 & \text{if the sum of edge 		densities in the}\\ & \text{patch (x', y') is greater than threshold}\\0 & 		\text{otherwise}\end{cases}
+        I^p(x',y')=\Bigg\{\begin{tabular}{cl}1 & if the sum of edge densities in the patch (x',y') is greater than threshold \\ [1ex] 0 & otherwise. \end{tabular}
     \end{equation}
     The 1’s in the patch image shows potentially occluded regions.
     \item Connected Components: There can be homogeneous regions in the non-occluded area as well. These regions, however, are generally small. Therefore, connected components operation is performed to find the size of largest group of connected patches with label 1, which corresponds to occluded region.
@@ -361,7 +383,7 @@ detection in a given image I:
     \begin{equation}
         f=\frac{\textnormal{No of 1 patches}}{\textnormal{Total number of patches}}
     \end{equation}
-\end{itemize}
+ \end{itemize} 
 We also observed that generally the dynamic range of $f$ is very small. Therefore, we expand its range with an exponential function to calculate the final score $S^0$:
 \begin{equation}
     S^0=1-e^{-f}
@@ -379,7 +401,7 @@ shows the corresponding occlusion score}
 
 \subsubsection{Tilt}
 In this work, we define tilt as the rotation of the camera around horizontal axis. User's generally do not like the videos recorded by tilted cameras. Therefore, we detect the tilted camera views and filter them. Here we use the heuristic that for a horizontally placed camera, most of the lines in the view are horizontal, while an inclined view generally has non-horizontal lines. The following steps are taken to calculation tilt:
-\begin{itemize}
+ \begin{itemize} 
     \item Line Detection: We use Hough transform to detect the straight line in the image. Let $l'_i$ be the length of the $i^{th}$ line and $o'_i$ the angle with respect to the horizontal line.
     \item Angle Restriction: We assume that the maximum tilt a camera can have is less than $\pm\pi/4$ and any line with the inclination above this angle is noise and not considered in calculation. Let the resulting orientation of $l'_i$ line be $o_i$.
     \item The final tilt score $S^t$ is calculated as absolute of the mean weighted orientation and normalized by $\pi/4$:
@@ -387,7 +409,7 @@ In this work, we define tilt as the rotation of the camera around horizontal axi
         S^t=\frac{abs(\frac{1}{N^l}\sum_{i=1}^{N^l} o_i * l_i)}{\pi/4}
     \end{equation}
     where $N^l$ is the total number of lines in the image.
-\end{itemize}
+ \end{itemize} 
 
 \begin{figure}
     \centering
@@ -404,14 +426,14 @@ Shakiness is calculated based on the method described in \cite{4}. In this metho
 
 \subsection{Learning}\label{learn}
 As mentioned earlier in Section \ref{intro}, it is difficult to precisely enumerate all the rules which professional editors follow in selecting a video and its corresponding shot length. In MoViMash, we propose to learn the behavior of professional editor statistically for use in creating mashup. We use professionally edited videos for this purpose. The rules are learned in terms of shooting angle, shooting distance, and shot length. Following are the steps taken in the process of learning:
-\begin{itemize}
+ \begin{itemize} 
     \item At first, we divide the video into a sequence of shots and record shot length.
     \item Each shot is classified as right $\mathcal{(R)}$, left $\mathcal{(R)}$, or center $\mathcal{(R)}$ based on shooting angle (Figure \ref{fig:fig1}).
     \item Depending on the distance of the recording device from the stage, the videos are further classified as near $\mathcal{(N)}$ or far $\mathcal{(F)}$ (Figure \ref{fig:fig1}).
     \item Based on both classifications, we define six states (also referred as classes in the paper) in which a video can be at any time instant, i.e., $\mathcal{CN}$, $\mathcal{CF}$, $\mathcal{RN}$, $\mathcal{RF}$, $\mathcal{LN}$, and $\mathcal{LF}$.
     \item From the sequence of the shots, we calculate the state transition probabilities for the above described six states.
     \item We now feed the transition probabilities (transition matrix) along with shot lengths (emission matrix) to an hidden Markov model (HMM). The HMM generates a sequence of shot states and their corresponding lengths.
-    
+
     \begin{equation}
         \bordermatrix{~ & \mathcal{CN} & \mathcal{CF} & \mathcal{RN} & \mathcal{RF} & \mathcal{LN} & \mathcal{LF} \cr
          \mathcal{CN}  &  0 & 0.4 & 0.2 & 0.1 & 0.2 & 0.1 \cr
@@ -422,7 +444,7 @@ As mentioned earlier in Section \ref{intro}, it is difficult to precisely enumer
          \mathcal{LF} & 0.2 & 0.2 & 0.1 & 0.1 & 0.4 & 0\cr
         }
     \end{equation}
-\end{itemize}
+ \end{itemize} 
 
 \begin{equation}
     \bordermatrix{~ & 1 & 2 & 3 & 4 & 5 & 6 & 7 \cr 
@@ -443,7 +465,7 @@ We can have different quality videos because of the limitation of
 recording devices, varied camera positioning, lighting conditions,
 camera angle, and video recording skills of the person. To produce
 aesthetically beautiful video, it is important to consider the quality of the videos.We are considering the following aspects to obtain video quality score:
-\begin{itemize}
+ \begin{itemize} 
     \item \textbf{Blockiness:} The blocking effect mainly comes due to poor quality of data compression. To measure blockiness, we take current image as sample and calculate its compression quality using the method described in \cite{18}. The method generates a score that takes a value between 1 and 10 (10 represents the best quality, 1 the worst). We normalize the score between 0 and 1. Let $S^b$ be the blockiness score.
     \item \textbf{Blur:} The video can be blurred due to many reasons such as out-of-focus recording, camera movement etc. We are calculating blur based on the method described in \cite{5}. Let $S^{br}$ be the blur score which varies between 0 to 1 (0 represents blurred and 1 sharp).
     \item \textbf{Illumination:} There can be videos that are recorded in poor lighting conditions. The purpose of including this metric in quality measurement is to avoid selecting dark videos. The illumination score for the image $S^{im}$ (with width $N_w$ and height $N_h$) is calculated as average gray value, normalized by 255.
@@ -463,7 +485,7 @@ aesthetically beautiful video, it is important to consider the quality of the vi
         \end{tabular}
     \end{equation}
     where $N^i$ is the total number of pixels in the image. In this case, a value of 1 represents best quality, i.e., no burnt pixels; while a value of 0 means at least 25\% pixels are burnt.
-\end{itemize}
+ \end{itemize} 
 The individual quality scores are multiplied to calculate overall
 video quality score $S^q$, i.e.,
 \begin{equation}
@@ -488,17 +510,17 @@ past. Let $\mathcal{H}$ be the history of the cameras that have been selected so
 \end{equation}
 where $N^v$ is the number videos selected in the recent past. Each
 tuple has the following two entries:
-\begin{itemize}
+ \begin{itemize} 
     \item $I^h$ - Snapshot from the selected cameras at the time of selection.
     \item $\Delta$ - The time for which the particular camera is selected. It is normalized between 0 to 1 by dividing each video duration by the total time over which history is stored. 
-\end{itemize}
+ \end{itemize} 
 Let $VS$ be the view similarity matrix:
 \begin{equation}
     VS=\{v_{ij}|1\leq i\leq n;1\leq j\leq N^v;\forall i=j,v_{ij}=1\}
 \end{equation}
 where $n$ is number of cameras, and $v_{ij}$ is the view similarity
 measure between current frame from the $i^{th}$ video and $j^{th}$ frame of the history. The motivation of defining the view similarity $VS$ is to select video with different views. The overall steps of diversity calculation are as follows:
-\begin{enumerate}
+ \begin{enumerate} 
     \item Determine the view similarity matrix $VS$ by comparing current frame with the frames stored in the history, i.e.,
     \begin{equation}\label{eq:15}
         v_{ij}=Diff(I_i^c,I_j^h)
@@ -509,7 +531,7 @@ measure between current frame from the $i^{th}$ video and $j^{th}$ frame of the 
         S^d=\sum_{j=1}^{N^v}v_{ij}*\Delta_j
     \end{equation}
     \item Store the viewing time of the previous video and the current frame of the selected video in $\mathcal{H}$. If we choose a scheme where each camera is selected only for fixed amount of time, we may just store the current frame of the selected video.
-\end{enumerate}
+ \end{enumerate} 
 
 \begin{table}
 \fontsize{8}{8}\selectfont
@@ -590,8 +612,8 @@ a friend?)\\
 \end{table}
 
 \section{Evaluation}\label{eval}
-I am adding one sentence per section.
-The main goal of the experiments is to show that the proposed
+\DIFaddbegin \DIFadd{I am adding one sentence per section.
+}\DIFaddend The main goal of the experiments is to show that the proposed
 framework produces a mashup with better view quality and diversity
 than earlier works. In addition, we also compare our result with
 human-edited versions of mashups. The dataset consists of video
@@ -669,16 +691,16 @@ closer to the human editors. It, however, adds to the processing
 cost. The enhanced diversity model requires more memory for storing the history and more number of comparisons. Similarly, occlusion and tilt also require data processing that would have quadratic complexity in terms of the number of pixels in the image. Therefore, individual components of the framework could be enabled or disabled depending on the quality of the candidate videos. For example, if the videos are taken from the stand-mounted cameras, shakiness calculation can be omitted. Furthermore, to make the system scalable, we can process downscaled images as the video resolution is not critical for the current system components.
 
 \section{ Conclusions \& Future Work}\label{future}
-Finally, I have added all the sentences.
-In this paper, we have proposed and validated an online video
+\DIFaddbegin \DIFadd{Finally, I have added all the sentences.
+}\DIFaddend In this paper, we have proposed and validated an online video
 mashup creation framework, MoViMash, for videos recorded by mobile devices. Based on the experiments and user study, we make following conclusions:
-\begin{itemize}
+ \begin{itemize} 
     \item MoViMash creates better quality mashups in comparison to human editor, and other methods that are mainly based on video quality.
     \item Proposed learning framework is able to imitate professional editor\textquoteright s experience to have smooth shot transitions in the final mashup. The proposed framework is most effective when there are a number of similar visual quality videos to chose from.
     \item The proposed framework is able to filter occluded and tilted views providing better viewing experience to the users.
     \item Human editors are not comfortable in editing videos that are recorded by mobile devices, particularly when there are large number of videos with varying quality.
     \item Proposed diversity model is able to incorporate both temporal and spatial aspects of the selection history.
-\end{itemize}
+ \end{itemize} 
 In the future, we want to extensively evaluate individual components of the system with respect to end-to-end system delay and output mashup quality. As current mobiles are capable of recording full HD video, we want to insert artificial zoom and pan in the mashup using zoomable video techniques \cite{11}. Further, a human director can only compare a limited number of videos at a time. A powerful computer, however, can process and compare a large number of videos simultaneously. Therefore, in the future we want to study the impact of the number of videos on the quality of the final mashup.
 
 \section*{Acknowledgement}

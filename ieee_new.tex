@@ -1,49 +1,25 @@
-\documentclass{sig-alternate}
+\documentclass[conference]{IEEEtran}
+\usepackage[cmex10]{amsmath}
+\usepackage[pdftex]{graphicx}
+\usepackage{url}
 \usepackage{comment}
 \usepackage{tabularx}
 \usepackage{tabu}
 \pagenumbering{arabic}
 \setcounter{page}{139}
 \begin{document}
-%
-% --- Author Metadata here ---
-\conferenceinfo{\textit{MM'12,}}{October 29-November 2, 2012, Nara, Japan}
-\CopyrightYear{2012} % Allows default copyright year (20XX) to be over-ridden - IF NEED BE.
-\crdata{978-1-4503-1089-5/12/10}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
-% --- End of Author Metadata ---
 
 \title{MoViMash: Online Mobile Video Mashup}
-
-\numberofauthors{4} 
-\author{
-% 1st. author
-\alignauthor
-Parul Gupta\\
-       \affaddr{Dept. of Computer Science}\\
-       \affaddr{\footnotesize{National University of Singapore}}\\
-       \email{mksaini@comp.nus.edu.sg}
-% 2nd. author
-\alignauthor
-Nitin Gandhi\\
-       \affaddr{Dept. of ECE}\\
-       \affaddr{\footnotesize{National University of Singapore}}\\
-       \email{elerdg@nus.edu.sg}
-% 3rd. author
-\and  % use '\and' if you need 'another row' of author names
-% 4th. author
-\alignauthor
-Paras Kumar\\
-       \affaddr{Dept. of ECE}\\
-       \affaddr{\footnotesize{National University of Singapore}}\\
-       \email{eleyans@nus.edu.sg}
-% 5th. author
-\alignauthor
-Ankan Bal\\
-       \affaddr{Dept. of Computer Science}\\
-       \affaddr{\footnotesize{National University of Singapore}}\\
-       \email{ooiwt@comp.nus.edu.sg}
-% 6th. author
-}
+ 
+\author{\IEEEauthorblockN{Parul Gupta\IEEEauthorrefmark{1},
+Nitin Gandhi\IEEEauthorrefmark{2},
+Paras Kumar\IEEEauthorrefmark{3}, 
+and
+Ankan Bal\IEEEauthorrefmark{4}}
+\IEEEauthorblockA{\IEEEauthorrefmark{1}Dept. of Computer Science\\National University of Singapore\\Email:mksaini@comp.nus.edu.sg}
+\IEEEauthorblockA{\IEEEauthorrefmark{2}Dept. of ECE\\National University of Singapore\\ Email:elerdg@nus.edu.sg}
+\IEEEauthorblockA{\IEEEauthorrefmark{3}Dept. of ECE\\National University of Singapore\\ Email:eleyans@nus.edu.sg}
+\IEEEauthorblockA{\IEEEauthorrefmark{4}Dept. of Computer Science\\National University of Singapore\\Email:ooiwt@comp.nus.edu.sg}}
 
 \maketitle
 \begin{abstract}
@@ -71,7 +47,7 @@ diversity measurement, state-based video editing rules, and
 view quality in automated video mashup generations. Experimental
 results have been provided to demonstrate the effectiveness of
 MoViMash framework.
-\end{abstract}\\
+\end{abstract}
 \textbf{Categories and Subject Descriptors:} I.2.10 [Vision and Scene Understanding]: Video Analysis\\
 \textbf{General terms:} Algorithms, Design.\\
 \textbf{Keywords:} Mobile Video, Virtual Director, Video Mashup.
@@ -353,7 +329,7 @@ detection in a given image I:
     \item Labeling the Patches: The image is now divided into patches of block size $b \times b$. Each patch is labeled as 1 if the sum of edge densities is less that a threshold, else it is labeled as 0.
     \begin{equation}
         I^{p}(x',y')=\begin{cases}
-      	1 & \text{if the sum of edge 		densities in the}\\ & \text{patch (x', y') is greater than threshold}\\0 & 		\text{otherwise}\end{cases}
+      1 & \text{if the sum of edge densities in the}\\ & \text{patch (x', y') is greater than threshold}\\0 & \text{otherwise}\end{cases}
     \end{equation}
     The 1’s in the patch image shows potentially occluded regions.
     \item Connected Components: There can be homogeneous regions in the non-occluded area as well. These regions, however, are generally small. Therefore, connected components operation is performed to find the size of largest group of connected patches with label 1, which corresponds to occluded region.
